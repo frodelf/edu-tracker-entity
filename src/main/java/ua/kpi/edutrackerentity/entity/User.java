@@ -17,11 +17,11 @@ public abstract class User {
     private String middleName;
     @Column(length = 100)
     private String image;
-    @Column(length = 100)
+    @Column(length = 100, unique = true)
     private String phone;
-    @Column(length = 100)
+    @Column(length = 100, unique = true)
     private String email;
-    @Column(length = 100)
+    @Column(length = 100, unique = true)
     private String telegram;
     @Column(length = 100)
     private String password;
