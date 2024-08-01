@@ -14,7 +14,9 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(length = 100, nullable = false)
     private String name;
+    @Column(length = 100, nullable = false)
     private String file;
     private StatusTask status;
     @JsonFormat(pattern = "yyyy.MM.dd HH:mm")

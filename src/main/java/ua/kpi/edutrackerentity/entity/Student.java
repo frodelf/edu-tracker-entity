@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @EqualsAndHashCode(callSuper = true)
 public class Student extends User {
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String groupName;
     @ManyToMany(mappedBy = "students", cascade = {CascadeType.ALL, CascadeType.PERSIST})
     @JsonBackReference
