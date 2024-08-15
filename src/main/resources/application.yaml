@@ -2,9 +2,9 @@ spring:
   application:
     name: edu-tracker-entity
   datasource:
-    url: jdbc:mysql://localhost:3306/edutracker
-    username: root
-    password: 1234
+    url: #your DB url
+    username: #your DB username
+    password: #your DB password
   jpa:
     generate-ddl: true
     show-sql: true
