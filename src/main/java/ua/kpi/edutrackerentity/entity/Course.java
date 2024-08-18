@@ -17,6 +17,7 @@ public class Course {
     private String name;
     @Column(length = 100)
     private String image;
+    private Boolean isForChoosing;
     private Double maximumMark;
     @Column(length = 1000)
     private String goal;
