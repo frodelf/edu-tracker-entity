@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
+import ua.kpi.edutrackerentity.entity.enums.StatusCourse;
 
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class Course {
     private Double maximumMark;
     @Column(length = 1000)
     private String goal;
+    private StatusCourse statusCourse;
     @ManyToOne
     @JoinColumn(name = "professor_id")
     @JsonBackReference
