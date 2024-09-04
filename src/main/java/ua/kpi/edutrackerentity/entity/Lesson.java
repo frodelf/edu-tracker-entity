@@ -13,6 +13,7 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime date;
+    private String link;
     private StatusLesson status;
     @ManyToOne
     private Course course;
