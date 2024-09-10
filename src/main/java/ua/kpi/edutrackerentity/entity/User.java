@@ -18,11 +18,11 @@ public abstract class User {
     @Column(length = 100)
     private String image;
     @Column(length = 100, unique = true)
-    private String phone="";
+    private String phone;
     @Column(length = 100, unique = true)
-    private String email="";
+    private String email;
     @Column(length = 100, unique = true)
-    private String telegram="";
+    private String telegram;
     @Column(length = 100)
     private String password;
 }
