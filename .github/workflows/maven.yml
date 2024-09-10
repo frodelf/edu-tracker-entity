@@ -15,13 +15,14 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '17'
-      - name: Substitute environment variables in application.yaml
-        run: |
-          sed -i "s|\${DB_USERNAME}|${{ secrets.DB_USERNAME }}|g" src/main/resources/application.yaml
-          sed -i "s|\${DB_PASSWORD}|${{ secrets.DB_PASSWORD }}|g" src/main/resources/application.yaml
       - name: Build app
         run: |
           mvn clean
+          
+          sed -i "s|\${DB_HOST}|${{ secrets.DB_HOST }}|g" src/main/resources/application.yaml
+          sed -i "s|\${DB_USERNAME}|${{ secrets.DB_USERNAME }}|g" src/main/resources/application.yaml
+          sed -i "s|\${DB_PASSWORD}|${{ secrets.DB_PASSWORD }}|g" src/main/resources/application.yaml
+          
           mvn package -DskipTests=true
       - name: Build Docker
         uses: docker/build-push-action@v2
